@@ -1,3 +1,17 @@
+	* add feature to allow storing disk cache blocks in an mmapped file (presumably on an SSD)
+	* optimize peer connection distribution logic across torrents to scale better with many torrents
+	* replaced std::map with boost::unordered_map for torrent list, to scale better with many torrents
+	* optimized piece picker
+	* optimized disk cache
+	* optimized .torrent file parsing
+	* optimized initialization of storage when adding a torrent
+	* added support for adding torrents asynchronously (for improved startup performance)
+	* added support for asynchronous disk I/O
+	* almost completely changed the storage interface (for custom storage)
+	* added support for hashing pieces in multiple threads
+
+0.16 release
+
 	* deprecate set_ratio(), and per-peer rate limits
 	* add web seed support for torrents with pad files
 	* introduced a more scalable API for torrent status updates (post_torrent_updates()) and updated client_test to use it
