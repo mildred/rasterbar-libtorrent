@@ -1,11 +1,10 @@
-example_programs =  \
-  client_test       \
-  dump_torrent      \
-  enum_if           \
-  make_torrent      \
-  simple_client     \
-  rss_reader        \
-  parse_request_log \
+example_programs = \
+  client_test      \
+  dump_torrent     \
+  enum_if          \
+  make_torrent     \
+  simple_client    \
+  rss_reader       \
   utp_test
 
 if ENABLE_EXAMPLES
@@ -35,9 +34,6 @@ rss_reader_SOURCES = rss_reader.cpp
 
 utp_test_SOURCES = rss_reader.cpp
 #utp_test_LDADD = $(top_builddir)/src/libtorrent-rasterbar.la
-
-parse_request_log_SOURCES = parse_request_log.cpp
-#parse_request_log_LDADD = $(top_builddir)/src/libtorrent-rasterbar.la
 
 LDADD = $(top_builddir)/src/libtorrent-rasterbar.la
 
